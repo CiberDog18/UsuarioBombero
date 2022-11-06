@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activities.DetailRequestActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginBottom="200dp"
+        />
+
+    <com.github.florent37.shapeofview.shapes.BubbleView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:shape_bubble_arrowHeight="15dp"
+        app:shape_bubble_arrowWidth="15dp"
+        app:shape_bubble_arrowPosition="top"
+        app:shape_bubble_borderRadius="20dp"
+        android:layout_gravity="bottom"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark" />
+        <!-- YOUR CONTENT -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:id="@+id/imageViewSelectPicturesRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/circleImagePhoto"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:scaleType="fitCenter"
+                        app:riv_border_width="2dip"
+                        app:riv_corner_radius="30dip"
+                        android:src="@drawable/ic_request"
+                        app:riv_oval="false"
+                        app:riv_border_color="@color/colorBlack"
+                        android:layout_gravity="center|top"
+                        />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="¡OBLIGATORIO! Adjunta una foto de lo ocurrido"
+                         android:maxLines="2"
+                         android:textColor="@color/colorBlack"
+                         android:textAlignment="center"
+                         android:textStyle="bold"
+                         android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </com.github.florent37.shapeofview.shapes.BubbleView>
+
+
+    <Button
+        android:id="@+id/btnRequestNow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="SOLICITAR AHORA"
+        android:background="@drawable/rounded_boton"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorBlack" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back_black"
+        android:layout_gravity="left|top"
+        app:civ_circle_background_color="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
